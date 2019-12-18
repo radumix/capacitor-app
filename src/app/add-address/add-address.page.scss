@@ -1,0 +1,68 @@
+.contentSection{
+    background: #fff;
+    height: 100%;
+}
+
+.radioSection{
+    padding-left:10px;
+}
+.f-nav{
+    display: flex;
+    justify-content: baseline
+}
+.f-form{
+    padding-top: 10px;
+    margin-left: 14px;
+}
+.flex{
+    display: flex
+}
+.f-gender{
+    margin-right:15px;
+    margin-left:3px;
+}
+.f-list{
+    margin-top:3px;
+}
+.f-item{
+    padding-left: 0px
+}
+
+.active{
+    --background:var(--ion-color-primary);
+    background:var(--ion-color-primary);
+}
+.btnOutline{
+    border:1px solid var(--ion-color-primary);
+    --border:1px solid var(--ion-color-primary);
+    border-radius: 5px;
+}
+.homeBtn{
+    max-width: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    justify-content: center;
+    
+}
+
+.officeBtn{
+    margin-left: 10px;
+    max-width: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    justify-content: center;
+    
+}
+.BtnSection{
+    display: flex;
+}
+.btnColorWhite{
+    color:#fff;
+}
+.btnColorBlack{
+    color:#000;
+}

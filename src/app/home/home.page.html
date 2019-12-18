@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <widget-lefthandlebar></widget-lefthandlebar>
+         <widget-datetime class="date-time"></widget-datetime>
+      <widget-suns></widget-suns>
+    </ion-toolbar>
+    <ion-toolbar color="primary">
+      <ion-searchbar color="light" md="ios" (click)="searchPage()"></ion-searchbar>
+    </ion-toolbar>
+    <widget-ads></widget-ads>
+  </ion-header>
+<ion-content>
+
+  <app-store></app-store>
+
+    <ion-label class="widget">{{widgetService.runningTime}}</ion-label>
+    <app-items></app-items>
+
+</ion-content>

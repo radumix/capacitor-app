@@ -1,0 +1,40 @@
+<div class="" no-margin *ngIf="similarProduct">
+    <div class="topSection">
+        <div>
+            <ion-label class="leftHeading">{{similarProduct.headingLeft}}</ion-label>
+        </div>
+        <div (click)="seeAllProduct()" class="topRightSection">
+            <ion-note color="danger" class="rightHeading">{{similarProduct.headingRight}}</ion-note>
+        </div>
+    </div>
+
+    <div class="productCardSection">
+        <ion-card class="productCard contentSection" *ngFor="let product of similarProduct.products;let i = index">
+            <div padding-horizontal class="productImage" (click)="viewProduct(product)">
+                <ion-img [src]="product.image" margin-top></ion-img>
+                <div class="SimilarShareSection" slot="end">
+                    <ion-icon name="heart" *ngIf="product.checked" class="iconSize heartRed " (click)="favoriteProduct(i)"></ion-icon>
+                    <ion-icon name="heart-empty" *ngIf="!product.checked" class="iconSize heartRed" (click)="favoriteProduct(i)"></ion-icon>
+                    <ion-icon name="share" class="iconSize shareIcon" mode="md" (click)="shareProduct(product)"></ion-icon>
+                </div>
+            </div>
+
+            <ion-card-header>
+                <div class="dFlexAlignItemCenter offSection">
+                    <div class="discountSection">
+                        <ion-label text-uppercase>4.5</ion-label>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <div class="dFlexTitle">
+                        <span class="titleFont">{{product.salePrice}}</span>
+                        <span class="subTitle"> {{product.regularPrice}}</span>
+                    </div>
+                </div>
+            </ion-card-header>
+            <ion-card-content padding-top>
+                <p class="textBold font18 productDesc">{{product.name}}</p>
+                <span class="productQty">{{product.qty}} </span>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</div>

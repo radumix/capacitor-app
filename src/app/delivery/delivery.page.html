@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title-ios" text-capitalize>Delivery Address</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-radio-group *ngIf="addressArray" [(ngModel)]="addressvalue">
+    <ion-item *ngFor="let add of addressArray|async; let i = index;">
+      <ion-label>
+        <ion-row align-items-center>
+          <p no-margin>
+            <strong>{{add.title}} {{add.name}}</strong>
+          </p>
+        </ion-row>
+        <ion-row>
+          <p no-margin>{{add.flatNumbers}}</p>
+        </ion-row>
+        <ion-row>
+          <p no-margin>{{add.street}}</p>
+        </ion-row>
+        <ion-row>
+          <p no-margin>{{add.locality}}</p>
+        </ion-row>
+      </ion-label>
+      <ion-radio slot="start" value={{add.id}} checked></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  <ion-card class="contentSection" (click)="addAddress()">
+      <ion-card-content>
+        <div class="dFlexAlignItemCenter">
+          <ion-icon name="add-circle-outline" class="iconSize fontSize"></ion-icon>
+          <h5 padding-start class="fontSize">Add New Address</h5>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  <ion-row class="check-row">
+    <div *ngFor="let day of Days;let i=index" [ngClass]="{'days':CurrentIndex == i}  " (click)="slideTap(i)" class="center">
+      <ion-col [ngClass]="{'days':CurrentIndex == i}" class="center">
+        <span class="day-addr">{{day}}</span>
+        <span *ngIf="check()"></span>
+      </ion-col>
+    </div>
+  </ion-row>
+
+  <ion-segment>
+    <ion-slides (ionSlideDidChange)="slideChanged()" pager="false" [options]="slideOpts" #slides>
+      <ion-slide *ngFor="let day of Days;let i=index">
+        <div class="timeSlide bgTransparent">
+          <ion-radio-group [(ngModel)]="selectedTime">
+            <ion-list class="check-list bgTransparent">
+              <ion-item *ngFor="let t of Time" class="list-items bgTransparent" lines="none">
+                <ion-radio checked="false" value={{t}}></ion-radio>
+                <ion-label padding-start>
+                  <span class="check-label">{{t}}</span>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-radio-group>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </ion-segment>
+</ion-content>
+
+<ion-footer (click)="paymentPage()">
+  <ion-toolbar class="bgTransparent">
+    <ion-row class="bgTransparent">
+      <ion-col text-center class="bgTransparent">
+        <ion-button color="primary" expand="full" class="btnRadius">Proceed To Payment</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

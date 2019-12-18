@@ -1,0 +1,60 @@
+
+
+.childCard{
+    width: 100%;
+    border-radius: 0;
+  }
+  
+  ion-col.cardCol {
+    text-align: center;
+    margin-top: 0px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+  }
+
+  .childCard{
+    width: 100%;
+    border-radius: 0;
+    --box-shadow:none;
+    box-shadow:none;
+    padding-top:8px;
+  }
+
+  ion-row.CardrowSection {
+    text-align:center;
+  }
+
+  ion-col.cardCol {
+    text-align: center;
+    margin-top: 0px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+  }
+
+  .childCardSection{
+    margin: 0 2px;
+    min-height: 210px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  .child{
+    width:52%
+  }
+  }
+  .bottom-text{
+    bottom: 5px;
+    justify-content: center;
+    display :flex;
+    width:100%;
+  }
+
+  .green {
+    color:green;
+}

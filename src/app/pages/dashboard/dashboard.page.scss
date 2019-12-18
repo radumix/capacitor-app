@@ -1,0 +1,17 @@
+ion-item-divider{
+    color:black;
+    // --ion-background-color: #000000;
+}
+
+.box {
+    background: #BADA55;
+    border: 1px solid black;
+    padding: 10px 20px;
+    display: inline-block;
+  
+    &.dragging {
+      background: coral;
+    }
+  }
+  
+ 

@@ -1,0 +1,62 @@
+
+.contentSection{
+    background: red;
+}
+
+.swiper-pagination.swiper-pagination-bullets{
+    display: none !important;
+}
+
+.check-row{
+   padding-left: 16px;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.center{
+    padding: 6px;
+    border-radius: 3px;
+}
+.days{
+    color: #fff;
+    background: var(--ion-color-primary);
+}
+
+.timeSlide{
+    width: 100%;
+}
+
+.ion-footer ion-toolbar{
+    --background:#eaeaea;
+    background:#eaeaea;
+  }
+
+  ion-footer{
+    --background:#eaeaea;
+  }
+
+  .footer-md:before{
+    background-image:none;
+  }
+  .bgTransparent{
+    --background:#eaeaea;
+    background:#eaeaea;
+  }
+
+  .newAddress{
+      padding: 0 5px;
+  }
+
+  .contentSection{
+    background: #fff;
+}
+
+.cardContentSection {
+    display: flex;
+    align-items: center;
+    
+    ion-label {
+        width: 100%
+    }
+}

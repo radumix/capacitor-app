@@ -1,0 +1,26 @@
+<ion-card class="contentSection" [ngClass]="{'minheight': cardContentToggle, 'carminHeight': !cardContentToggle}" id="accordian">
+    <ion-card-header (click)="toggleAccordian()" [ngClass]="{'textColorWhite': cardContentToggle, 'textColorBlack': !cardContentToggle}"
+        class="pRelative">
+        <div>
+            <div class="discountSection">
+                <ion-label text-uppercase>{{label}}</ion-label>
+            </div>
+            <img class="sideImg" src="{{image}}" alt="">
+        </div>
+        <div class="pRelative">
+            <ion-buttons class="iconBtn">
+                <ion-icon *ngIf="!accordianExpandable" name="arrow-down" mode="ios" class="icons" color="primary" style="    margin-top: 5px;"></ion-icon>
+                <ion-icon *ngIf="accordianExpandable" name="arrow-up" mode="ios" class="icons whiteColor" color="light"
+                    style="    margin-top: 5px;"></ion-icon>
+            </ion-buttons>
+        </div>
+        <div class="titleSection">
+            <b><span class="title">{{title}}</span></b>
+            <br>
+            <span class="des">{{desc}}</span>
+        </div>
+    </ion-card-header>
+    <ion-card-content #cardContent *ngIf="cardContentToggle" margin-bottom no-margin no-padding>
+        <ng-content></ng-content>
+    </ion-card-content>
+</ion-card>

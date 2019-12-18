@@ -1,0 +1,67 @@
+
+.imageViewSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    img {
+      width: 70%;
+    }
+  }
+  
+  .iconSection {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .iconSize {
+    font-size: 24px;
+  }
+  
+  .heartRed {
+    color: red;
+  }
+  
+  .productTitle {
+    font-size: 22px;
+    // padding-left: 16px;
+  }
+  .shareIcon {
+    margin-left: 8px;
+  }
+  
+  .dFlexSection {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .priceSection {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    width: 100%;
+    justify-content: space-between;
+    background: #fff;
+    padding-right: 16px;
+  }
+  
+  ion-footer ion-toolbar {
+    --background: #eaeaea;
+  }
+  
+  .footer-md:before {
+    background-image: none;
+  }
+  
+  .fixed {
+    position: fixed;
+  }
+  
+  .quantitySection {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+ 

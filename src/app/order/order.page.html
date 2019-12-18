@@ -1,0 +1,128 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="title-ios" text-capitalize>My Order</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+
+
+  <!-- <ion-list *ngIf="products.cartArray.length>0">
+    <ion-item *ngFor="let c of products.cartArray;let i=index" class="order-item">
+      <ion-thumbnail class="thumbnail">
+        <img class="thumb-img" class="sideImg" src="{{c.image}}" alt="Images">
+      </ion-thumbnail>
+      <div item-content style="width:calc(100% - 120px) ;">
+        <ion-badge item-content *ngIf="c.off!=undefined">Up to {{c.off}}</ion-badge><br>
+        <h2 ion-content>
+          <b class="order-name">{{c.name}}</b>
+        </h2>
+        {{c.qty}}
+        <br>
+        <ion-grid class="o-list">
+          <ion-row>
+
+            <ion-col col-4 class="o-col">
+              <strong><span>${{c.price}}</span></strong>
+            </ion-col>
+            <ion-col col-8 class="right">
+              <span class="vertical" [ngClass]="{'red':c.status=='Late','green':c.status=='Delivered','orange':c.status=='Processing'}">{{c.status}}</span>
+            </ion-col>
+
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-item>
+  </ion-list> -->
+
+  <div class="order-div" *ngIf="fsServices.UserOrders.length==0">
+    <img src="assets/imgs/pixel2.jpeg" alt="image">
+    <br>
+    <div class="cartTextSection" text-center>
+      <h3>You have no past orders</h3>
+      <p>Lets get you started</p>
+      <ion-button color="primary" (click)="startShopping()">Start shopping </ion-button>
+    </div>
+
+  </div>
+  <ion-list margin-top *ngIf="orders">
+    <ion-card *ngFor="let order of orders | async;let i=index" no-padding class="cardSection">
+      <div class="productSection">
+        <div class="productTitle pRelative order-summary">
+          <div margin-top padding-top>
+            <h6>Grand Total :₹{{order.grandTotal}}</h6>
+            <h6>Number of products : ₹{{order.products.length}}</h6>
+          </div>
+        </div>
+        <div slot="end" class="productCartSection">
+          <div class="addBtnSection">
+            <ion-row>
+              <ion-col class="right">
+                <span class="vertical" [ngClass]="{'red':order.status=='Late','green':order.status=='Delivered','orange':order.status=='Processing'}">{{order.status}}</span>
+              </ion-col>
+            </ion-row>
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let product of order.products"  class="address-block">
+        <div class="productSection">
+          <div class="imageSection" padding>
+            <img [src]="product.images[0]">
+          </div>
+          <div class="productTitle pRelative">
+            <div class="discountSection">
+              <ion-label text-uppercase>{{product.offer}} % off</ion-label>
+            </div>
+            <div margin-top padding-top>
+              <h4 class="title">{{product.name}}</h4>
+              <h6>₹ {{product.regularPrice}}</h6>
+              <h6>Quanity : {{product.units}}</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="address-block">
+        <div class="addBtnSection">
+          <ion-row>
+            <ion-col>
+              Address:
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              {{order.address.flatNumber}} {{order.address.street}} {{order.address.locality}}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              Deliverd To:
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              {{order.address.title}} {{order.address.name}}
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+      <div class="address-block" *ngIf="order.promoCode">
+        <div class="addBtnSection">
+          <ion-row>
+            <ion-col>
+              PromoCode:
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              {{order.promoCode.code}} {{order.promoCode.discount}}% off
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+    </ion-card>
+  </ion-list>
+
+</ion-content>

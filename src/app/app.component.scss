@@ -1,0 +1,83 @@
+
+ion-list{
+    ion-label{
+        font-size: 18px;
+    }
+}
+
+ion-content{
+    --background:#fff;
+}
+
+
+
+.userSection{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+
+    ion-avatar{
+        width: 70px;
+        height: 70px;
+
+    }
+
+    ion-label{
+        font-size: 22px;
+    }
+
+    .arrowSection{
+        position: absolute;
+        right: 9px;
+        font-size: 20px;
+    }
+}
+
+.locationSection{
+    display: flex;
+    align-items: center;
+
+    .pinSection{
+        padding-left: 16px;
+        padding-right: 16px;
+        font-size: 22px;
+    }
+
+    .locationDetails{
+
+        h3{
+            margin-top: 5px;
+        }
+    }
+    
+}
+
+.userParentSection{
+    display: flex;
+    background: var(--ion-color-primary);
+    justify-content: space-around;
+    .userChildSection {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        img{
+            width: 36px;
+        }
+
+        .titleSection{
+            padding-top:8px;
+        }
+    }
+}
+
+.appPageSection{
+    border-bottom: 1px solid #cccaca;
+
+}
+
+

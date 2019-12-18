@@ -1,0 +1,7 @@
+{
+  "name": "amanasoft-mobile-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,26 @@
+<ion-header color="primary">
+  <ion-toolbar lines="none">
+    <ion-title slot="start">
+      Select Location
+    </ion-title>
+    <ion-buttons slot="end" size="large">
+      <ion-back-button [text]="''" icon="close" class="btn-close"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar class="padding-tool">
+    <ion-searchbar placeholder="Search Location" no-padding></ion-searchbar>
+    <p no-margin padding style="font-size:16px;text-align:center;">Or</p>
+    <button class="btn" ion-button full color="primary" (click)="getUserLocation()">Use my Current Location</button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content no-padding>
+  <div class="under">
+    <p class="city">Popular Cities</p>
+  </div>
+  <ion-list class="scroll">
+    <ion-item *ngFor="let item of items">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+</ion-content>

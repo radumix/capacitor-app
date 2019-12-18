@@ -1,0 +1,44 @@
+<top-header></top-header>
+<ion-content>
+  <ion-row *ngIf="allProducts">
+    <ion-col size="6" *ngFor="let product of allProducts | async ;let i = index">
+      <ion-card class="productCard">
+        <div padding-horizontal class="productImage" (click)="viewProduct(product)">
+          <div class="discountSection">
+            <ion-label text-uppercase>{{product.offer}} % off</ion-label>
+          </div>
+          <ion-img [src]="product.images[0]" class="productImg"></ion-img>
+        </div>
+
+        <ion-card-header>
+          <div class="dFlexAlignItemCenter">
+            <ion-card-title>{{product.salePrice}}</ion-card-title>
+            <span class="subTitle"> {{product.regularPrice}}</span>
+          </div>
+        </ion-card-header>
+        <ion-card-content class="cardContentSection">
+
+          <p class="textBold font18 productDesc">{{product.name}}</p>
+          <span class="productQty">{{product.pricePerQuantity}} </span>
+          <div class="addBtnSection">
+            <ion-button expand="full" color="danger" class="addBtn" *ngIf="product.units === 0" (click)="addToCart(product)">
+              Add</ion-button>
+
+            <ion-segment *ngIf="product.units > 0" mode="md">
+              <ion-segment-button mode="md" no-padding color="undefined" (click)="updateCart(product.id,'remove')"
+                class="segmentBtn">
+                <ion-icon name="remove-circle-outline"></ion-icon>
+              </ion-segment-button>
+              <ion-text padding-horizontal class="textUnits">{{product.units}}</ion-text>
+              <ion-segment-button mode="md" no-padding color="undefined" (click)="updateCart(product.id,'add')"
+                class="segmentBtn">
+                <ion-icon name="add-circle-outline"></ion-icon>
+              </ion-segment-button>
+            </ion-segment>
+          </div>
+
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

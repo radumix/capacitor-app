@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" color="light">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="title-ios" text-capitalize>Offer</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="offerList">
+  <ion-card class="contentSection" *ngFor="let offer of offerList | async">
+    <img [src]="offer.images[0]">
+    <ion-card-header>
+      <ion-card-title>{{offer.title}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-label>{{offer.description}}</ion-label> <br />
+      <ion-label><b>Code: </b>{{offer.code}}</ion-label><br />
+      <!-- <ion-label><b>Min Order Value: </b> {{offer.minOrder}}</ion-label><br /> -->
+    </ion-card-content>
+  </ion-card>
+</ion-content>

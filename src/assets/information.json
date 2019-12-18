@@ -1,0 +1,436 @@
+
+{
+    "items": [
+        {
+            "name": "Fruits & Vegetables",
+            "label":"Up to 60% OFF",
+            "desc":"Fruits & Vegetables Baskets,Fruits, Vegetables,Cut Fresh & herbs",
+            "image":"assets/imgs/apples.png",
+            "units":0,
+            "price" :35,
+            "qty" : "200g+200g+200g",
+            "children": [
+                {  "id":0,
+                    "name": "Fruits Vegetables & Baskets",
+                    "off":"Up to 16% OFF",
+                    "image":"assets/imgs/Banana.png",
+                    "units":0,
+                    "price" :35,
+                    "qty" : "200g+200g+200g",
+                    "prop":[ 
+                        {
+                            "id":0,
+                            "name": "Apple",
+                            "qty" : "200g+200g+200g",
+                            "price" :35,
+                            "flag" : 1,
+                            "units":0,
+                            "image":["assets/imgs/apple.png","assets/imgs/service-fruits.jpg"],
+                            "off" : "22",
+                            "check":false,
+                            "status":"Delivered"
+                        },
+                        {
+                            "id":1,
+                            "name": "Mango",
+                            "qty" : "200g+200g+200g",
+                            "price" :35,
+                            "flag" : 1,
+                            "units":0,
+                            "image":["assets/imgs/mango.jpg","assets/imgs/mango2.jpeg"],
+                            "off" : "22",
+                            "check":false,
+                            "status":"Processing"
+                        },
+                        {
+                            "id":2,
+                            "name": "Orange ",
+                            "qty" : "200g+200g+200g",
+                            "price" :35,
+                            "flag" : 1,
+                            "units":0,
+                            "image":["assets/imgs/orange2.jpeg"],
+                            "off" : "22",
+                            "check":false,
+                            "status":"Late"
+                        }
+                    ]
+                },
+                {
+                    "id":1,
+                    "name": "Fruits",
+                    "off":"Up to 16% OFF",
+                    "image":"assets/imgs/apple.png",
+                    "units":0,
+                    "price" :35,
+                    "qty" : "200g+200g+200g",
+                    "prop":[
+                        {    "id":0,
+                            "name": "Green Chilli-Garlic-Ginger",
+                            "qty" : "200g+200g+200g",
+                            "price" :35,
+                            "flag" : 1,
+                            "image":["assets/imgs/Banana.png"],
+                            "check":false,
+                            "status":"Processing"
+                        },
+                        {  "id":1,
+                            "name": "Pink Chilli-Garlic-Ginger",
+                            "qty" : "200g+200g+200g",
+                            "price" :35,
+                            "flag" : 1,
+                            "image":["assets/imgs/mango.jpg"],
+                            "check":false,
+                            "status":"Delivered"
+                        },
+                        {  "id":2,
+                            "name": "Purple Chilli-Garlic-Ginger",
+                            "qty" : "200g+200g+200g",
+                            "price" :35,
+                            "flag" : 1,
+                            "image":["assets/imgs/mango.jpg"],
+                            "check":false,
+                            "status":"Late"
+                        }
+                    ]
+                    
+                },
+                {   "id":3,
+                    "name": "Vegetables",
+                    "off":"Up to 16% OFF",
+                    "image":"assets/imgs/tomato.jpg",
+                    "units":0,
+                    "price" :35,
+                    "qty" : "200g+200g+200g",
+                    "prop":[
+                        {   "id":0,
+                            "name": "Green Chilli-Garlic-Ginger",
+                            "qty" : "200g+200g+200g",
+                            "price" :35,
+                            "flag" : 1,
+                            "units":0,
+                            "image":["assets/imgs/Banana.png"],
+                            "check":false,
+                            "status":"Delivered"
+                        },
+                        {    "id":1,
+                            "name": "Green Chilli-Garlic-Ginger",
+                            "qty" : "200g+200g+200g",
+                            "price" :35,
+                            "flag" : 1,
+                            "units":0,
+                            "image":["assets/imgs/Banana.png"],
+                            "check":false,
+                            "status":"Delivered"
+                        },
+                        {   "id":2,
+                            "name": "Green Chilli-Garlic-Ginger",
+                            "qty" : "200g+200g+200g",
+                            "price" :35,
+                            "flag" : 1,
+                            "units":0,
+                            "image":["assets/imgs/Banana.png"],
+                            "check":false,
+                            "status":"Delivered"
+                        }
+                    ]
+                },
+                {   "id":4,
+                    "name": "Cut Fresh 7 Herbs" ,
+                    "off":"Up to 16% OFF",
+                    "image":"assets/imgs/herbs.jpg",
+                    "units":0,
+                    "qty" : "200g+200g+200g",
+                    "price" :35,
+                    "prop":[
+                        {   "id":0,
+                            "name": "Green Chilli-Garlic-Ginger",
+                            "qty" : "200g+200g+200g",
+                            "price" :35,
+                            "flag" : 1,
+                            "units":0,
+                            "image":["assets/imgs/Banana.png"],
+                            "check":false,
+                            "status":"Delivered"
+                        },
+                        {   "id":1,
+                            "name": "Green Chilli-Garlic-Ginger",
+                            "qty" : "200g+200g+200g",
+                            "price" :35,
+                            "units":0,
+                            "flag" : 1,
+                            "image":["assets/imgs/Banana.png"],
+                            "check":false,
+                            "status":"Delivered"
+                        },
+                        {   "id":2,
+                            "name": "Green Chilli-Garlic-Ginger",
+                            "qty" : "200g+200g+200g",
+                            "price" :35,
+                            "units":0,
+                            "flag" : 1,
+                            "image":["assets/imgs/Banana.png"],
+                            "check":false,
+                            "status":"Delivered"
+                        }
+                    ]
+                },
+                {     "id":5,
+                    "name": "Apples",
+                    "off":"Up to 16% OFF",
+                    "image":"assets/imgs/apple.png",
+                    "units":0,
+                    "price" :35,
+                    "qty" : "200g+200g+200g",
+                    "prop":[
+                        {   "id":0,
+                            "name": "Green Chilli-Garlic-Ginger",
+                            "qty" : "200g+200g+200g",
+                            "price" :35,
+                            "flag" : 1,
+                            "units":0,
+                            "image":["assets/imgs/Banana.png"],
+                            "check":false,
+                            "status":"Delivered"
+
+                        },
+                        {   "id":1,
+                            "name": "Green Chilli-Garlic-Ginger",
+                            "qty" : "200g+200g+200g",
+                            "price" :35,
+                            "flag" : 1,
+                            "units":0,
+                            "image":["assets/imgs/Banana.png"],
+                            "check":false,
+                            "status":"Delivered"
+
+                        },
+                        {   "id":2,
+                            "name": "Green Chilli-Garlic-Ginger",
+                            "qty" : "200g+200g+200g",
+                            "price" :35,
+                            "flag" : 1,
+                            "units":0,
+                            "image":["assets/imgs/Banana.png"],
+                            "check":false,
+                            "status":"Delivered"
+
+                        }
+                    ]
+                }
+            ]
+            
+        },
+        {   "id":6,
+            "name": "Beverages",
+            "label":"Up to 40% OFF",
+            "desc":"Fruits & Vegetables Baskets,Fruits, Vegetables,Cut Fresh & herbs",
+            "image":"assets/imgs/bevarages.png",
+            "units":0,
+            "qty" : "200g+200g+200g",
+            "price" :35,
+            "children": [
+                {       "id":0,
+                    "name": "Drinks",
+                    "off":"Up to 16% OFF",
+                    "image":"assets/imgs/bb3.jpg",
+                    "units":0,
+                    "price" :35,
+                    "prop":[
+                        {   "id":0,
+                            "name": "Green Chilli",
+                            "qty" : "1 pcs",
+                            "price" :35,
+                            "units":0,
+                            "flag" : 1,
+                            "image":["assets/imgs/b.jpg"],
+                            "check":false,
+                            "status":"Delivered"
+                        },
+                        {    "id":1,
+                            "name": "Green Chilli",
+                            "qty" : "1 pcs",
+                            "price" :35,
+                            "units":0,
+                            "flag" : 1,
+                            "image":["assets/imgs/b.jpg"],
+                            "check":false,
+                            "status":"Delivered"
+                        },
+                        {   "id":2,
+                            "name": "Green Chilli",
+                            "qty" : "1 pcs",
+                            "price" :35,
+                            "units":0,
+                            "flag" : 1,
+                            "image":["assets/imgs/b.jpg"],
+                            "check":false,
+                            "status":"Delivered"
+                        }
+                    ]
+                },
+                {   "id":7,
+                    "name": "Flavoured drinks",
+                    "off":"Up to 16% OFF",
+                    "units":0,
+                    "image":"assets/imgs/bb2.jpg",
+                    "price" :35,
+                    "qty" : "200g+200g+200g",
+                    "prop":[ 
+                        {
+                            "id":0,
+                            "name": "Green Chilli",
+                            "qty" : "1 pcs",
+                            "price" :35,
+                            "units":0,
+                            "flag" : 1,
+                            "image":["assets/imgs/b.jpg"],
+                            "check":false,
+                            "status":"Delivered"
+                        },
+                        {   "id":1,
+                            "name": "Green Chilli",
+                            "qty" : "1 pcs",
+                            "price" :35,
+                            "units":0,
+                            "flag" : 1,
+                            "image":["assets/imgs/b.jpg"],
+                            "check":false,
+                            "status":"Delivered"
+                        },
+                        {   "id":1,
+                            "name": "Green Chilli",
+                            "qty" : "1 pcs",
+                            "price" :35,
+                            "units":0,
+                            "flag" : 1,
+                            "image":["assets/imgs/b.jpg"],
+                            "check":false,
+                            "status":"Delivered"
+                        }
+                    ]
+                }, {  "id":8,
+                    "name": "Flavoured Mocktails",
+                    "off":"Up to 16% OFF",
+                    "image":"assets/imgs/bb.jpg",
+                    "qty" : "200g+200g+200g",
+                    "units":0,
+                    "price" :35,
+                    "prop":[
+                        {   "id":0,
+                            "name": "Green Chilli",
+                            "qty" : "1 pcs",
+                            "price" :35,
+                            "flag" : 1,
+                            "units":0,
+                            "image":["assets/imgs/b.jpg"],
+                            "check":false,
+                            "status":"Delivered"
+                        },
+                        {   "id":1,
+                            "name": "Green Chilli",
+                            "qty" : "1 pcs",
+                            "price" :35,
+                            "flag" : 1,
+                            "units":0,
+                            "image":["assets/imgs/b.jpg"],
+                            "check":false,
+                            "status":"Delivered"
+                        },
+                        {  "id":2,
+                            "name": "Green Chilli",
+                            "qty" : "1 pcs",
+                            "price" :35,
+                            "flag" : 1,
+                            "units":0,
+                            "image":["assets/imgs/b.jpg"],
+                            "check":false,
+                            "status":"Delivered"
+                        }
+                    ]
+                }
+            ]
+        },
+        
+        {
+            "id":9,
+            "name": "Home & Kitchen",
+            "label":"Up to 70% OFF",
+            "qty" : "200g+200g+200g",
+            "desc":"Fruits & Vegetables Baskets,Fruits, Vegetables,Cut Fresh & herbs",
+            "image":"assets/imgs/kitchen.png",
+            "units":0,
+            "price" :35,
+            "children": [
+                {
+                    "id":0,
+                    "name": "Razor",
+                    "off":"Up to 16% OFF",
+                    "image":"assets/imgs/appliance1.png",
+                    "units":0,
+                    "price" :35,
+                    "prop":[
+                        {
+                            "id":0,
+                            "name": "Razor",
+                            "qty" : "1 pcs",
+                            "price" :35,
+                            "flag" : 1,
+                            "units":0,
+                            "image":["assets/imgs/appliance1.png"],
+                            "check":false,
+                            "status":"Delivered"
+                        }
+                    ]
+                },
+                {   "id":10,
+                    "name": "Iron",
+                    "off":"Up to 16% OFF",
+                    "image":"assets/imgs/appliance1.png",
+                    "units":0,
+                    "price" :35,
+                    "qty" : "200g+200g+200g",
+                    "prop":[
+                       
+                        { 
+                            "id":0,
+                            "name": "Green Chilli-Garlic-Ginger",
+                            "qty" : "1 pcs",
+                            "price" :35,
+                            "flag" : 1,
+                            "units":0,
+                            "image":["assets/imgs/appliance2.png"],
+                            "off" : "22",
+                            "check":false,
+                            "status":"Delivered"
+                        }
+                    ]
+                },
+                {
+                    "id":11,
+                    "name": "Toaster",
+                    "off":"Up to 16% OFF",
+                    "units":0,
+                    "image":"assets/imgs/appliance3.png",
+                    "price" :35,
+                    "qty" : "200g+200g+200g",
+                    "prop":[
+                        { "id":0,
+                            "name": "Green Chilli-Garlic-Ginger",
+                            "qty" : "1 pcs",
+                            "price" :35,
+                            "flag" : 1,
+                            "units":0,
+                            "image":["assets/imgs/appliance3.png"],
+                            "off" : "22",
+                            "check":false,
+                            "status":"Delivered"
+                        }
+                        
+                    ]
+                }
+            ]
+        }
+       
+    ]
+}

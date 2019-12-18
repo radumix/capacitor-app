@@ -1,0 +1,83 @@
+<ion-app>
+<widget-cart></widget-cart>
+  <ion-split-pane>
+    <ion-menu type="push" side="start">
+      <ion-content>
+        <div *ngIf="userDetails" class="userSection" padding-top padding-start (click)="userProfile()">
+          <ion-avatar slot="start">
+            <img [src]="userDetails.profileUrl">
+          </ion-avatar>
+          <div padding-start>
+            <ion-label>
+              {{userDetails.name}}
+            </ion-label>
+          </div>
+          <div  class="arrowSection">
+              <ion-icon name="arrow-forward" slot="end" color="dark" mode="ios"></ion-icon>
+          </div>
+         
+        </div>
+        <div class="locationSection" padding-start padding-bottom (click)="locationPage()">
+          <div class="pinSection">
+              <ion-icon name="pin" color="primary" ></ion-icon>
+          </div>
+          <div class="locationDetails">
+            <ion-note class="font18">Your Location</ion-note>
+            <h3 text-capitalize>{{userDetails.location}}</h3>
+          </div>
+            
+        </div>
+
+        <div *ngIf="userPersonalDetails" class="userParentSection" padding-vertical>
+          <div *ngFor=" let personalDetails of userPersonalDetails" class="userChildSection" (click)="navigatePage(personalDetails.url,personalDetails.value)" >
+            <img [src] ="personalDetails.icons">
+            <ion-label color="light" class="titleSection">{{personalDetails.title}}</ion-label>
+          </div>
+        </div>
+      
+        <ion-list class="appPageSection">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" lines="none">
+              <ion-icon slot="start" [name]="p.icon" color="primary" mode="ios"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+        
+        <ion-list>
+          <ion-label padding-start><b>Others</b></ion-label>
+            <ion-menu-toggle auto-hide="false" *ngFor="let p of otherPages">
+              <ion-item (click) ="redirectPage(p.url)" lines="none">
+                <ion-icon slot="start" [name]="p.icon" color="primary" [mode]="p.mode"></ion-icon>
+                <ion-label>
+                  {{p.title}}
+                </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+          </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <ion-menu side="end" type="reveal">
+        <ion-header>
+          <ion-toolbar color="danger">
+            <ion-title>Shoppers online</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <ion-item>
+            Radumix - 2 mins ago.
+          </ion-item>
+          <ion-item>
+            Utuhko - Just in.
+          </ion-item>
+        </ion-content>
+      
+      </ion-menu>
+
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

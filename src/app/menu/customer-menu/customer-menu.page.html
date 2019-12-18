@@ -1,0 +1,77 @@
+<ion-menu side="start" menuId="custom" class="my-custom-menu">
+  <ion-header>
+    <ion-toolbar >
+      <ion-title>
+        Amanashoppers
+      </ion-title>
+      <ion-buttons slot="end">
+        <ion-icon slot="end" color="light" src="./assets/icon/shoppers6familyballoons.svg"></ion-icon>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-icon slot="start" color="light" name="cart"></ion-icon>
+        <ion-label>
+          Shopping
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" color="light" name="trending-up"></ion-icon>
+        <ion-label>
+          Checkout
+          <ion-badge color="tertiary">8</ion-badge>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" color="light" name="sync"></ion-icon>
+        <ion-label>
+          Recent Logs
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" color="light" name="text"></ion-icon>
+        <ion-label>
+          My Record
+          <ion-badge color="primary">8</ion-badge>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" color="light" name="umbrella"></ion-icon>
+        <ion-label>
+          Popular
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer>
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-icon slot="end" color="light" src="./assets/icon/user1logout.svg"></ion-icon>
+      </ion-buttons>
+      <ion-title start>
+        Logout
+      </ion-title>
+    </ion-toolbar>
+  </ion-footer>
+</ion-menu>
+
+<ion-menu side="end" type="push">
+  <ion-header>
+    <ion-toolbar color="danger">
+      <ion-title>Shoppers online</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-item>
+      Radumix - 2 mins ago.
+    </ion-item>
+    <ion-item>
+      Utuhko - Just in.
+    </ion-item>
+  </ion-content>
+
+</ion-menu>
+
+<ion-router-outlet main></ion-router-outlet>

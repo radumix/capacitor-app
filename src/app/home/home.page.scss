@@ -1,0 +1,161 @@
+
+.contentSection{
+    background: #fff;
+    margin: 8px;
+  }
+  
+  .leftHeading{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .locationAddress{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 10px;
+  }
+  .flex{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .rightHeading{
+    font-size: 18px;
+  }
+  
+  .topRightSection{
+      border: 1px solid #9e9898;
+      padding: 6px;
+      border-radius: 5px;
+  }
+  
+  .productCard{
+    box-shadow: 0 4px 16px rgba(156, 153, 153, 0.97);
+    --box-shadow: 0 4px 16px rgba(156, 153, 153, 0.97);
+    width: 60%;
+  
+  .productImage{
+      padding: 0 40px;
+      position: relative;
+  
+      .discountSection {
+        background: #15bf15;
+        color: #fff;
+        position: absolute;
+        padding: 6px 16px;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: 8px;
+        left: 10px;
+      }
+  }
+  
+    ion-card-header{
+      padding: 0 16px;
+    }
+    .subTitle{
+      font-size: 16px;
+      text-decoration: line-through;
+      padding-left: 16px;
+      color: #000;
+    }
+  }
+  
+  .addBtnSection{
+    .addBtn{
+      border-radius:5px;
+    --border-radius:5px; 
+    }
+    
+  }
+  
+  .slideSection{
+    margin: 8px;
+    img{
+      border-radius: 8px;
+    }
+  }
+  
+  .childCard{
+    width: 100%;
+    border-radius: 0;
+    box-shadow:none;
+    --box-shadow:none;
+  }
+  
+  ion-row.CardrowSection {
+    text-align:center;
+    
+  }
+  
+  ion-col.cardCol {
+    text-align: center;
+    margin-top: 0px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+  }
+  
+  .deliverySection{
+    ion-note{
+      font-size: 18px;
+    }
+    ion-label{
+      font-size: 20px;
+      font-weight: bold;
+    }
+    ion-icon{
+      font-size: 24px;
+    }
+  }
+  
+  .bottom-text{
+    bottom: 5px;
+    justify-content: center;
+    display :flex;
+    width:100%;
+  }
+  .green {
+      color:green;
+  }
+  
+  .childCardSection{
+    margin: 0 2px;
+    min-height: 210px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    .child{
+      width: 52%;
+    }
+  }
+
+  .widget{
+    position: absolute;
+    z-index: 9999;
+    top:0;
+    right:0;
+    color:#f5f6f9;
+    background-color: #f04141;
+    padding:5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.door{
+  font-size: 25px;
+  position: absolute;
+  margin-left: -8px;
+  margin-top: -3px;
+  z-index: 9999;
+}
+
+.date-time{
+  margin-left: 50px;
+}
+

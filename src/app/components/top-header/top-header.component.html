@@ -1,0 +1,78 @@
+<ion-header>
+ 
+    <!-- <div [@elementState]="state">
+        My state changes
+      </div>
+
+      <button ion-button (click)="makeOpaque()">
+          Make it opaque
+        </button>
+      
+        <button ion-button (click)="makeTransparent()">
+          Make it transparent
+        </button> -->
+
+
+  <!-- <ion-fab (click)="cartPage()" class="movable" appMovable vertical="center" horizontal="start" edge slot="fixed">
+    <ion-badge style="position: absolute; bottom: 0; z-index: 9999; " color="dark">
+      {{cart.productQty}}
+    </ion-badge>
+    <ion-fab-button>
+      <ion-icon name="cart"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> -->
+
+  <ion-toolbar color="primary">
+    <ion-icon *ngIf="sService.sidemenu[0].lefthandlebar" class="door" src="./assets/icon/doorway_svg1.svg" mode="md"></ion-icon>
+    <ion-label class="cdttm">{{widgetService.cDate}} {{widgetService.cTime}} {{widgetService.ampm}}</ion-label>
+    <!-- <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons> -->
+    <!-- <div class="dFlexRow deliverySection">
+        <ion-note class="whiteColor">Delivery Location</ion-note>
+        <div class="flex">
+          <ion-label class="locationAddress">{{locationAddress}}</ion-label>
+          <ion-icon name="create" mode="md" (click)="addLocation()"></ion-icon>
+        </div>
+      </div> -->
+
+    <!-- <ion-button slot="end" mode="ios" class="pRelative" (click)="cartPage()">
+      <ion-icon slot="icon-only" name="cart"></ion-icon>
+      <span class="cartQuantity">{{cart.productQty}}</span>
+    </ion-button> -->
+
+    <div class="sun_frame" [@elementState]="state">
+        <ion-icon src="./assets/icon/sunset2.svg" ></ion-icon>
+      <ion-label>   6:18 PM</ion-label> <br>
+        <ion-icon src="./assets/icon/sunrise.svg" ></ion-icon>
+          <ion-label>  5:12 AM</ion-label>
+      </div>
+    
+  <!-- <ion-card >
+      <ion-item color="danger">
+      
+        <ion-label>6:00 PM</ion-label>
+        <ion-label>5:45 AM</ion-label>
+      </ion-item>
+    
+      
+    </ion-card> -->
+
+    <ion-button (click)="makeOpaque()" slot="end" mode="ios">
+      <ion-icon color="warning" class="sunny_icon" src="./assets/icon/sunny.svg"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+  <ion-toolbar *ngIf="sService.sidemenu[0].searchbar" color="primary">
+    <!-- <ion-button slot="end">{{runningTime}}</ion-button> -->
+    <ion-searchbar color="light" md="ios" (click)="searchPage()"></ion-searchbar>
+  </ion-toolbar>
+  <div *ngIf="sService.sidemenu[0].ads">
+      <ion-slides class="sliderads" pager="true" [options]="slideOptsAds">
+
+          <ion-slide *ngFor="let slide of prodoctSlides">
+              <img class="imgads" [src]="slide">
+            </ion-slide>
+          
+        </ion-slides>
+      </div>
+</ion-header>

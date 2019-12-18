@@ -1,0 +1,38 @@
+<div class="contentSection" padding>
+
+  <ion-list class="f-list" lines="full">
+    <ion-item class="f-item" lines="full">
+      <ion-label position="floating">Name</ion-label>
+      <ion-input type="text" [(ngModel)]="userInfo.username" name="username"></ion-input>
+    </ion-item>
+
+    <ion-item class="f-item" lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" [(ngModel)]="userInfo.email" name="email" disabled></ion-input>
+    </ion-item>
+
+    <ion-item class="f-item" lines="full">
+      <ion-label position="floating">Phone Number</ion-label>
+      <ion-input type="tel" [(ngModel)]="userInfo.phoneNumber" name="phoneNumber"></ion-input>
+    </ion-item>
+    <ion-list>
+      <ion-radio-group [(ngModel)]="userInfo.gender">
+        <ion-list-header>
+          Gender
+        </ion-list-header>
+        <ion-item>
+          <ion-label>Male</ion-label>
+          <ion-radio value="male"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Female</ion-label>
+          <ion-radio value="female"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  </ion-list>
+
+  <div>
+    <ion-button expand="full" color="primary" (click)="Continue()">Continue</ion-button>
+  </div>
+</div>

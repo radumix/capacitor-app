@@ -1,0 +1,49 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios" color="primary">
+    <ion-buttons slot="start" (click)="dismiss()">
+      <ion-icon name="arrow-round-back" slot="icon-only" class="white" margin></ion-icon>
+    </ion-buttons>
+    <ion-searchbar md="ios" color="light" class="" (ionChange)="searchResult($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="colorWhite dFlexJustifyContentSpaceBt" padding-top *ngIf="RecentHistory">
+    <div class="white primaryColorSection">Recent Search</div>
+    <div class="white primaryColorSection" (click)="clearHistory()">
+      <ion-ripple-effect></ion-ripple-effect> Clear History
+    </div>
+  </div>
+  <ion-list *ngIf="SearchResult">
+    <ion-item lines="none" *ngFor="let result of SearchResult | async" (click)="viewProduct(result)">
+      <img [src]="result.images[0]" class="search-image">
+      <div class="dFlex">
+        <ion-label>{{result.name}}</ion-label> &nbsp;
+        <ion-label slots="end">{{result.salePrice}}</ion-label>
+        <!-- <ion-label color="primary">{{history.category}}</ion-label> -->
+      </div>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item lines="none" *ngFor="let history of fsServices.recentSearches">
+      <ion-icon name="time" slot="start"></ion-icon>
+      <div class="dFlex">
+        <ion-label>{{history}}</ion-label>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <!-- <div class="colorWhite" *ngIf="RecentHistory" padding-top padding-start margin-top>
+    <div class="white">Trending Search</div>
+  </div> -->
+  <!-- <ion-list>
+    <ion-item lines="none" *ngFor="let history of RecentHistory">
+      <ion-icon name="trending-up" slot="start"></ion-icon>
+      <div class="dFlex">
+        <ion-label>{{history.productName}}</ion-label>
+      </div>
+    </ion-item>
+  </ion-list> -->
+
+
+</ion-content>

@@ -1,0 +1,167 @@
+/**
+ * Ionic 4  Grocery Complete Platform(https://store.enappd.com/product/ionic-4-grocery-app-and-admin-dashboard)
+ *
+ * Copyright © 2019-present Enappd. All rights reserved.
+ *
+ * This source code is licensed as per the terms found in the
+ * LICENSE.md file in the root directory of this source .
+ *
+ */
+
+ 
+.scroll-content {
+    padding: 0!important;
+    margin-bottom:44px;
+    /* padding: 5px !important; */
+}
+.fix-content {
+    padding: 0!important;
+    margin-bottom:44px;
+    /* padding: 5px !important; */
+}
+.card-header-style{
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0px;
+    margin: 15px;
+    padding-bottom: 5px;
+}
+ 
+ .cart-icon-number-div{
+    position: absolute;
+    right: 6px;
+    top: 9px;
+    background-color: white;
+    color: #4183d7;
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+ }
+ .video-title-style{
+    color: white;
+    padding: 10px;
+    background:#4183D7!important;
+    margin-top: -5px;
+    font-weight: bold;
+ }
+ .call-icon-style{
+    background: red;
+    color: #f4f4f4;
+ 
+ }
+ 
+ 
+ .footer-button{
+    margin: 0px;
+    width: 100%;
+    background: #32db64;
+    color: #f4f4f4;
+    font-size: 300;
+    font-weight: 300;
+ }
+ .share-icon-style{
+        position: absolute;
+    color: white;
+    font-size: 2em;
+    right: 60px;
+    top: 14px;
+    z-index: 10000;
+ }
+ .whatsapp-button-style{
+        position: fixed;
+    z-index: 100000;
+    bottom: 103px;
+    right: 15px;
+    height: 46px;
+    width: 46px;
+    background-color: #1ebea5;
+ }
+ .gradient-div{
+    background: linear-gradient(to right, #32db64 50%, #bdbdbd 50%);
+    height: 8px;
+    width: 35vw;
+    border-radius: 2px;
+    margin-right: 5px;
+    margin-left: 5px;
+ }
+ .flex-center{
+    align-items: center;
+    justify-content: center;
+ }
+ .left-div{
+    text-align: center;
+    width: 40vw;
+    border-right: 1px solid #bdbdbd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ .review-rating{
+    width: 30px;
+    height: 20px;
+    background: #32db64;
+    color: white;
+    margin-right: 10px;
+    font-size: .8em;
+    border-radius: 2px;
+ }
+ .date-span{
+    font-size: .8em;
+    color: grey;
+    float: right;
+ }
+ .small-star{
+    color: #a2a252;
+    font-size: 1em;
+ }
+ .image-div{
+        height: 100px;
+    width: 100px;
+ }
+ .revie-top-most-div{
+        display: flex;
+    justify-content: space-between;
+ }
+ .image-style-review{
+        height: 100%;
+    width: 100%;
+    object-fit: cover;
+ }
+
+ .flex{
+     display: flex;
+ }
+
+ .revie-top-most-div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.contentSection{
+    background: #fff;
+}
+.itemBorder{
+    border-top: 1px solid #cdc9c9;
+}
+
+.starText{
+    font-size: 20px;
+}
+
+.averageReview{
+    font-size: 30px;
+}
+
+.icon-style{
+    font-size: 27px;
+    color: #f4d60a;
+}

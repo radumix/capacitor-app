@@ -1,0 +1,47 @@
+
+.discountSection {
+    background: #15bf15;
+    color: #fff;
+    position: absolute;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: -5px;
+    left: 10px;
+
+    ion-label{
+        font-size: 14px;
+    }
+}
+.productSection{
+    display: flex;
+    align-items: center;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    width: 100%;
+}
+
+ion-segment{
+    height: 36px;
+}
+
+.segmentBtn{
+    min-width: 30px;
+    max-width: 40px;
+}
+
+.footerRowSection{
+    display: flex;
+    align-items: flex-end;
+}
+ion-segment{
+    align-items: center;
+    ion-text{
+        margin-top: 10px;
+    }
+}
+
+ion-list{
+    background:#eaeaea;
+}
+ 

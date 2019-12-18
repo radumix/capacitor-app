@@ -1,0 +1,42 @@
+
+.ionSegementSection{
+    background: #a81b1b;
+}
+
+.segment-button-indicator{
+    align-self: center;
+    background-color: var(--indicator-color-checked,var(--color-checked));
+    background: #fff;
+    height: 5px;
+    width: 65px;
+}
+.ion-segment-button{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.userSection{
+    display: flex;
+    align-items: center;
+    position: relative;
+    // justify-content: space-between;
+}
+
+.userName{
+    font-size: 22px;
+}
+
+.userDetail{
+    display: flex;
+    flex-direction: column;
+}
+
+.editSection{
+    position: absolute;
+    right: 10px;
+}
+
+.iconSize{
+    font-size: 22px;
+}

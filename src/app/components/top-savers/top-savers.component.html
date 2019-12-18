@@ -1,0 +1,51 @@
+<ion-card class="contentSection" no-margin *ngIf="topSavers">
+  <div class="topSection">
+    <div>
+      <ion-label class="leftHeading">
+        {{topSavers.headingLeft}}
+      </ion-label>
+    </div>
+    <!-- <div (click)="seeAllProduct()" class="topRightSection">
+      <ion-note color="danger" class="rightHeading">
+        {{topSavers.headingRight}}
+      </ion-note>
+    </div> -->
+  </div>
+
+  <div class="productCardSection">
+    <ion-card class="productCard cardBorderRadius" *ngFor="let product of topSavers.products;let i = index">
+      <div padding-horizontal class="productImage" (click)="viewProduct(product)">
+        <div class="discountSection">
+          <ion-label text-uppercase>{{product.off}}</ion-label>
+        </div>
+        <ion-img [src]="product.image" margin-top></ion-img>
+      </div>
+
+      <ion-card-header>
+        <div class="dFlexAlignItemCenter">
+          <ion-card-title>{{product.salePrice}}</ion-card-title>
+          <span class="subTitle"> {{product.regularPrice}}</span>
+        </div>
+        <!-- <h5 no-padding no-margin class="textBold productName">Apple</h5> -->
+      </ion-card-header>
+      <ion-card-content>
+        <p class="textBold font18 productDesc">{{product.name}}</p>
+        <span class="productQty">{{product.qty}} </span>
+        <div class="addBtnSection">
+          <ion-button expand="full" color="danger" class="addBtn" *ngIf="product.units === 0" (click)="addToCart(i)">Add</ion-button>
+
+          <ion-segment *ngIf="product.units > 0" mode="md">
+            <ion-segment-button mode="md" no-padding color="undefined" (click)="updateCart(product.id,'remove')" class="segmentBtn">
+              <ion-icon name="remove-circle-outline"></ion-icon>
+            </ion-segment-button>
+            <ion-text padding-horizontal class="textUnits">{{product.units}}</ion-text>
+            <ion-segment-button mode="md" no-padding color="undefined" (click)="updateCart(product.id,'add')" class="segmentBtn">
+              <ion-icon name="add-circle-outline"></ion-icon>
+            </ion-segment-button>
+          </ion-segment>
+        </div>
+
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-card>

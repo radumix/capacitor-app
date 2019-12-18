@@ -1,0 +1,68 @@
+<div *ngIf="review.length > 0" class="contentSection" padding-vertical margin-bottom>
+  <div style="    padding-left: 16px;">
+    Ratings & Reviews
+  </div>
+  <div class="flex" padding-bottom>
+    <div class="left-div">
+      <div class="flex">
+        <h1 style="margin:0" class="averageReview">{{averageReview}}</h1>
+        <ion-icon name="star" class="icon-style"></ion-icon>
+      </div>
+      <div>
+        {{review.length}} reviews
+      </div>
+    </div>
+    <div style="width:60vw">
+      <div class="flex flex-center">
+        <span class="starText">5</span>
+        <ion-icon name="star" class="small-star"></ion-icon>
+        <div class="gradient-div" [style.background]="'linear-gradient(to right, #32db64 0%,#32db64 ' + fivepercentage + '%, #bdbdbd '+ fivepercentage +'% , #bdbdbd 100%)'"></div>{{starfive}}
+      </div>
+      <div class="flex flex-center">
+        <span class="starText">4</span>
+        <ion-icon name="star" class="small-star"></ion-icon>
+
+        <div class="gradient-div" [style.background]="'linear-gradient(to right, #32db64 0%, #32db64 ' + fourpercentage + '%, #bdbdbd '+ fourpercentage +'% , #bdbdbd 100%)'"></div>{{starfour}}
+      </div>
+      <div class="flex flex-center">
+        <span class="starText">3</span>
+        <ion-icon name="star" class="small-star"></ion-icon>
+        <div class="gradient-div" [style.background]="'linear-gradient(to right, #32db64 0%, #32db64 ' + threepercentage + '%, #bdbdbd '+ threepercentage +'% , #bdbdbd 100%)'"></div>{{starthree}}
+      </div>
+      <div class="flex flex-center">
+        <span class="starText">2</span>
+        <ion-icon name="star" class="small-star"></ion-icon>
+        <div class="gradient-div" [style.background]="'linear-gradient(to right, #32db64 0%, #32db64 ' + twopercentage + '%, #bdbdbd '+ twopercentage +'% , #bdbdbd 100%)'"></div>{{startwo}}
+      </div>
+      <div class="flex flex-center">
+        <span class="starText">1</span>
+        <ion-icon name="star" class="small-star"></ion-icon>
+        <div class="gradient-div" [style.background]="'linear-gradient(to right, #32db64 0%, #32db64 ' + onepercentage + '%, #bdbdbd '+ onepercentage +'% , #bdbdbd 100%)'"></div>{{starone}}
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <ion-item *ngFor="let review of review" class="itemBorder" lines="none">
+      <div class="revie-top-most-div">
+        <div style="width: 60%;">
+          <div class="flex flex-center" style="justify-content: flex-start;">
+            <div class="flex flex-center review-rating"> {{review.starCount}}
+              <ion-icon name="star"></ion-icon>
+            </div>
+            <div style="white-space: normal;">
+              {{review.headline}}
+            </div>
+          </div>
+          <div style="white-space: normal;"> {{review.message}}</div>
+        </div>
+        <div *ngIf="review.imageUrl" class="image-div">
+          <img src={{review.imageUrl}} class="image-style-review">
+        </div>
+      </div>
+      <div> {{review.userInfo.username}}
+        <span class="date-span"> {{review.dateOfReview}}</span>
+      </div>
+    </ion-item>
+  </div>
+</div>

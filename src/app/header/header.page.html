@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-icon class="door" src="./assets/icon/doorway_svg1.svg" mode="md"></ion-icon>
+    <ion-label class="cdttm">{{cDate}} {{cTime}} {{ampm}}</ion-label>
+    <ion-button (click)="default()">Default</ion-button>
+    <!-- <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons> -->
+    <!-- <div class="dFlexRow deliverySection">
+        <ion-note class="whiteColor">Delivery Location</ion-note>
+        <div class="flex">
+          <ion-label class="locationAddress">{{locationAddress}}</ion-label>
+          <ion-icon name="create" mode="md" (click)="addLocation()"></ion-icon>
+        </div>
+      </div> -->
+
+    <ion-button slot="end" mode="ios" class="pRelative" (click)="cartPage()">
+      <ion-icon slot="icon-only" name="cart"></ion-icon>
+      <span class="cartQuantity">{{cart.productQty}}</span>
+    </ion-button>
+  </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-searchbar color="light" md="ios" (click)="searchPage()"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>

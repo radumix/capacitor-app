@@ -1,0 +1,9 @@
+<div class="sun_frame" [@elementState]="state">
+  <ion-icon src="./assets/icon/sunset2.svg"></ion-icon>
+  <ion-label> 6:18 PM</ion-label> <br>
+  <ion-icon src="./assets/icon/sunrise.svg"></ion-icon>
+  <ion-label> 5:12 AM</ion-label>
+</div>
+<ion-button class="sun-button" (click)="makeOpaque()" slot="end" mode="ios">
+  <ion-icon color="warning" class="sunny_icon" src="./assets/icon/sunny.svg"></ion-icon>
+</ion-button>

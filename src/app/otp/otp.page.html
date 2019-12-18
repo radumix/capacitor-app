@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title-ios" text-capitalize>Verification Code</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <ion-text text-center>
+      <h3 class="" padding-horizontal>Please enter Verification code sent On {{phoneNumber}}</h3>
+    </ion-text>
+  </div>
+  <div class="phonetopSection">
+    <div class="phoneSection" padding-bottom>
+      <div class="divOuter marginTop">
+        <div class="divInner marginTop">
+          <ion-input type="tel" class="inputBorder  marginTop" #otp1 maxlength="1" [(ngModel)]="otpInput1" (keyup)="next(otp2,'1')"></ion-input>
+          <ion-input type="tel" class="inputBorder marginTop" #otp2 maxlength="1" [(ngModel)]="otpInput2" (keyup)="next(otp3,'2')"></ion-input>
+          <ion-input type="tel" class="inputBorder marginTop" #otp3 maxlength="1" [(ngModel)]="otpInput3" (keyup)="next(otp4,'3')"></ion-input>
+          <ion-input type="tel" class="inputBorder marginTop" #otp4 maxlength="1" [(ngModel)]="otpInput4"></ion-input>
+        </div>
+      </div>
+
+    </div>
+    <div class="policyText" text-center>
+      <ion-button mode="md" expand="full" color="danger" margin-top (click)="verify()">Verify
+      </ion-button>
+      <div class="resendSection">
+        <ion-text color="primary" (click)="resendMsg()">
+          <h5>Resend</h5>
+        </ion-text>
+        <ion-text>
+          <!-- <h6 id="timer"></h6>left -->
+          <h6>5:24 left</h6>
+        </ion-text>
+      </div>
+    </div>
+  </div>
+  <div class="resendText" text-center *ngIf="resendMsgToggle" margin-top>
+    <ion-icon name="checkmark-circle-outline" color="success" class="successOtp"></ion-icon>
+    <ion-text>
+      <h5 no-padding no-margin>A One Time Password has been sent to {{phoneNumber}}</h5>
+    </ion-text>
+  </div>
+
+
+</ion-content>

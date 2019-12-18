@@ -1,0 +1,80 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+          <widget-datetime></widget-datetime>
+      <widget-suns></widget-suns>
+    </ion-toolbar>
+    <!-- <widget-ads></widget-ads> -->
+  </ion-header>
+  
+  <ion-content *ngIf="product">
+    <ion-row>
+      <ion-col class="imageViewSection">
+        <img [src]="product.image">
+      </ion-col>
+    </ion-row>
+  
+    <ion-row margin-bottom>
+      <ion-col size="8" padding-start>
+        <ion-label class="productTitle">{{product.name}}</ion-label>
+      </ion-col>
+      <ion-col size="4" class="iconSection">
+        <ion-icon name="heart" *ngIf="heartToggle" class="iconSize heartRed" (click)="favoriteProduct()">
+          <ion-ripple-effect>
+          </ion-ripple-effect>
+        </ion-icon>
+        <ion-icon name="heart-empty" *ngIf="!heartToggle" class="iconSize heartRed" (click)="favoriteProduct()"></ion-icon>
+        <ion-icon name="share" class="iconSize shareIcon" mode="md" (click)="shareProduct(product)"></ion-icon>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row class="priceSection" margin-top margin-bottom padding-vertical>
+      <ion-col size="6" no-padding>
+        <div class="dFlexSection">
+          <ion-label>Price</ion-label>
+          <ion-label color="primary" padding-start>₱{{product.price}}</ion-label>
+        </div>
+      </ion-col>
+      <ion-col size="6" no-padding class="quantitySection">
+        <div class="dFlexSection">
+          <ion-label>Quantity</ion-label>
+          <ion-select padding-start [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="0"
+            [(ngModel)]="selectedQty" mode="ios" (ionChange)="addQty(selectedQty)">
+            <ion-select-option *ngFor="let item of quantityList" [value]="item" selected>{{item}}
+              <ion-label></ion-label>
+            </ion-select-option>
+          </ion-select>
+        </div>
+      </ion-col>
+    </ion-row>
+  
+  <!--Check Delivery Component location:- components/check-delivery-->
+    <!-- <check-delivery></check-delivery> -->
+  
+    <!--Review Component location:- components/stor-review-->
+    <!-- <stor-review></stor-review> -->
+  
+    <!--Similar Product Component location:- components/similar-product>-->
+    <similar-product></similar-product>
+  
+  
+  
+  </ion-content>
+  <ion-footer>
+    <ion-toolbar>
+      <ion-row>
+        <ion-col size="6" text-center>
+          <ion-button expand="full" color="light" (click)="addtoCart()">
+            <ion-text color="primary" text-uppercase>Add to Cart</ion-text>
+          </ion-button>
+        </ion-col>
+        <ion-col size="6" text-center>
+          <ion-button expand="full" color="primary" (click)="buyNow()">
+            <ion-text text-uppercase>Buy Now</ion-text>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
+  </ion-footer>

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" color="light">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="title-ios" text-capitalize>categories</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <std-accordian *ngFor="let item of categoryItems | async" [title]="item.name" [image]="item.images[0]"
+    [label]="item.discount" [desc]="item.description" [id]="item.id">
+    <div *ngFor="let category of fsServices.categories">
+      <ion-card class="childCard" no-margin padding-top *ngIf="category.id === item.id">
+        <ion-row class="CardrowSection" margin-bottom>
+          <ion-col no-padding (click)="goToProducts(category,category.child)" class="cardCol" mdWavesEffect size="6"
+            *ngFor="let child of category.child">
+            <ion-card class="childCardSection">
+              <img class="child" src="{{child.images[0]}}" alt="">
+              <ion-card-content>
+                <span class="under">{{child.name}}</span>
+                <ion-row class="bottom-text text-center green center-xs">
+                  <span class="h-off"> {{child.offer}} %off</span>
+                </ion-row>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </div>
+  </std-accordian>
+</ion-content>

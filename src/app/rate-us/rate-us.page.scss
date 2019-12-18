@@ -1,0 +1,60 @@
+
+
+.modal-wrapper.modal-wrapper-md.sc-ion-modal-md {
+    opacity: .9;
+    --opacity:.9;
+}
+
+
+
+.bottom > .button-inner{
+    flex-direction: coloumn;
+}
+.rate-div{
+    background-color: rgba(0, 0, 0, 0.5) ; 
+    display: flex; 
+    height: 100vh; 
+    justify-content: center;
+    align-items: center
+}
+.inside-div{
+    background-color: white;
+    margin-left: 16px;
+    margin-right: 16px;
+    border-radius:3px;
+    padding-left: 10px;
+    padding-right: 10px; 
+    width:84%;
+}
+.head{
+    margin-top:1rem;
+    text-align: center
+}
+.size{
+    font-size: 15px
+}
+.new{
+    display: block;
+    margin-bottom:6px;
+}
+.green-btn{
+    height: 140px;
+
+}
+.happy{
+    zoom:3;margin-right:2px
+}
+.display{
+    display: block
+}
+.red-btn{
+    height: 140px;
+
+}
+.sad{
+    zoom:3;margin-right:2px
+}
+
+.emojiImg{
+    width: 90px;
+}

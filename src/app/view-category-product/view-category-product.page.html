@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title-ios" text-capitalize>{{categoryName}}</ion-title>
+    <ion-button slot="end" mode="ios" class="pRelative" (click)="cartPage()">
+      <ion-icon slot="icon-only" name="cart"></ion-icon>
+      <span class="cartQuantity">{{cart.productQty}}</span>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list padding-top>
+    <ion-item *ngFor="let product of categoryProducts | async;let i = index" no-padding>
+      <div class="productSection">
+        <ion-col size="4" (click)="viewProduct(product)">
+          <div class="imageSection" padding>
+            <img [src]="product.images[0]">
+          </div>
+        </ion-col>
+        <ion-col size="8">
+          <div class="productshowSection">
+            <div class="productTitle pRelative">
+              <div class="discountSection">
+                <ion-label text-uppercase>{{product.offer}} %off</ion-label>
+              </div>
+              <ion-row (click)="viewProduct(product)">
+                <div margin-top padding-top>
+                  <h4 class="title textBold">{{product.name}}</h4>
+                  <span class="productQty">{{product.pricePerQuantity}} </span>
+                </div>
+              </ion-row>
+              <ion-row class="footerRowSection">
+                <ion-col size="4">
+                  <h6>₹{{product.salePrice}}</h6>
+                </ion-col>
+                <ion-col size="8">
+                  <div class="productCartSection" text-right>
+                    <div class="addBtnSection">
+                      <ion-button size="default" color="danger" *ngIf="product.units === 0" (click)="addToCart(product)">Add
+                      </ion-button>
+                      <ion-segment *ngIf="product.units > 0" mode="md">
+                        <ion-segment-button mode="md" no-padding color="undefined" (click)="updateCart(product.id,'remove', product)" class="segmentBtn">
+                          <ion-icon name="remove-circle-outline"></ion-icon>
+                        </ion-segment-button>
+                        <ion-text padding-horizontal class="textUnits">{{product.units}}</ion-text>
+                        <ion-segment-button mode="md" no-padding color="undefined" (click)="updateCart(product.id,'add', product)" class="segmentBtn">
+                          <ion-icon name="add-circle-outline"></ion-icon>
+                        </ion-segment-button>
+                      </ion-segment>
+                    </div>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </div>
+          </div>
+        </ion-col>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

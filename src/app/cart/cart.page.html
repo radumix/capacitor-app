@@ -1,0 +1,120 @@
+<ion-header>
+  <ion-toolbar color="primary">
+  <widget-lefthandlebar></widget-lefthandlebar>
+  <widget-datetime class="date-time"></widget-datetime>
+  <widget-suns></widget-suns>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <div *ngIf="cart.addCart.length > 0">
+    <ion-card class="contentSection" >
+      <ion-card-content no-padding>
+        <div>
+            <div class="totalitems dFlexJustifyContentSpaceBetween">
+                <ion-text  class="textPadding">
+                    <h5>Total Item's</h5>
+                  </ion-text>
+                  <ion-text  class="textPadding">
+                      <h5> {{cart.addCart.length}}</h5>
+                  </ion-text>
+            </div>
+          <div class="subTotal dFlexJustifyContentSpaceBetween" >
+            <ion-text class="textPadding">
+              <h5>Sub Total</h5>
+            </ion-text>
+            <ion-text  class="textPadding">
+                <h5> ₱ {{cart.subTotal}}</h5>
+            </ion-text>
+          </div>
+          <div class="dliveryCharge dFlexJustifyContentSpaceBetween">
+              <ion-text  class="textPadding">
+                  <h5>Dilevery Charge</h5>
+                </ion-text>
+                <ion-text  class="textPadding">
+                    <h5> ₱ {{cart.deliveryCharge}} </h5>
+                </ion-text>
+          </div>
+          <div class="yourSaving dFlexJustifyContentSpaceBetween">
+              <ion-text  class="textPadding">
+                  <h5>Your Saving</h5>
+                </ion-text>
+                <ion-text  class="textPadding">
+                    <h5> {{cart.totalSave}}</h5>
+                </ion-text>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <!--Product List-->
+    <ion-list margin-top>
+        <ion-item *ngFor="let product of cart.addCart;let i = index" no-padding>
+          <div class="productSection">
+            <div class="imageSection" padding>
+                <img [src]="product.image">
+            </div>
+            
+            <div class="productTitle pRelative">
+              <div class="discountSection">
+                <ion-label text-uppercase>{{product.off}}</ion-label>
+              </div>
+              <div margin-top padding-top>
+                  <h4 class="title">{{product.name}}</h4>
+                  <h6>₱{{product.price}}</h6>
+              </div>
+             
+            </div>
+             <div slot="end" class="productCartSection">
+              <div class="addBtnSection">
+                <!-- <ion-button expand="full"  (click)="addToCart(i)">
+                  <ion-icon name="close" color="danger" slot="icon-only" ></ion-icon>
+                </ion-button> -->
+                <div class="removeBtn">
+                    <ion-button color="undefined" fill="clear" (click)="removeProduct(product.id,i,product.units)">
+                        <ion-icon slot="icon-only" name="close" color="danger"></ion-icon>
+                    </ion-button>
+                </div>
+                
+    
+                <ion-segment *ngIf="product.units > 0" mode="md">
+                  <ion-segment-button mode="md" no-padding color="undefined" (click)="updateCart(product.id,'remove')"
+                    class="segmentBtn">
+                    <ion-icon name="remove-circle-outline"></ion-icon>
+                  </ion-segment-button>
+                  <ion-text padding-horizontal class="textUnits">{{product.units}}</ion-text>
+                  <ion-segment-button mode="md" no-padding color="undefined" (click)="updateCart(product.id,'add')"
+                    class="segmentBtn">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                  </ion-segment-button>
+                </ion-segment>
+              </div>
+            </div> 
+          </div>
+        </ion-item>
+      </ion-list>
+      <!--End of Product List-->
+
+  </div>
+    <div  *ngIf="cart.addCart.length==0" [ngClass]="{ 'cartTopSection' :cart.addCart.length == 0 }" >
+        <div  [ngClass]="{ 'cartTextSection' : cart.addCart.length == 0 }" text-center>
+          <ion-icon name="cart" class="cartIcon"></ion-icon>
+            <h3>Your Cart is Empty</h3> 
+            <p>Lets get you started</p>
+            <ion-button color="primary" (click)="startShopping()">Start shopping </ion-button>
+        </div>
+      </div>
+</ion-content>
+
+<ion-footer   (click)="deliveryAddress()" *ngIf="cart.addCart.length > 0">
+  <ion-toolbar color="primary" padding-horizontal>
+    <div class="footerCartSection">
+      <ion-text>
+        <h4>Checkout</h4>
+      </ion-text>
+      <ion-text>
+        <h4> ₱ {{cart.grandTotal}} </h4>
+      </ion-text>
+    </div>
+  </ion-toolbar>
+</ion-footer>
